@@ -1,0 +1,23 @@
+apiVersion: back_end/v1
+kind: Deployment
+metadata:
+  name: backEnd
+  labels:
+    app: backEnd
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: backEnd
+    spec:
+      containers:
+      - image: back_end_image_1
+        name: backEnd
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 9000
+        resources: {}
+      restartPolicy: Always
+status: {}
